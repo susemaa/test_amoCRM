@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+  <div class="container-fluid my-4">
+    <div class="card mb-2">
+      <div class="card-body py-2">
+        <div class="btn-group d-flex" role="group">
+          <button type="button" class="btn btn-secondary active" data-pagination="all">Все</button>
+          <button type="button" class="btn btn-secondary" data-pagination="2">По 2</button>
+          <button type="button" class="btn btn-secondary" data-pagination="5">По 5</button>
+          <button type="button" class="btn btn-secondary" data-pagination="10">По 10</button>
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <table class="table mb-0">
+        <thead>
+          <tr class="text-center">
+            <th scope="col" role="button" id="name">Название <span id="arrow">&uarr;</span></th>
+            <th scope="col" role="button" id="price">Бюджет</th>
+            <th scope="col">Дата создания</th>
+            <th scope="col">Автор</th>
+            <th scope="col">Дата последнего изменения</th>
+            <th scope="col">Автор последнего изменения</th>
+          </tr>
+        </thead>
+        <tbody id="table-body">
+          <tr>
+            <td colspan="6" class="text-center" id="loading">Loading...</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="row mt-2">
+      <div class="col text-center px-0" id="pagination-footer">
+        <div>Страница 1 из 1</div>
+      </div>
+    </div>
+  </div>
+
+  <script src="index.js"></script>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
