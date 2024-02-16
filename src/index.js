@@ -143,9 +143,11 @@ function app() {
         if (firstElementChild.textContent === upArrow) {
           store.deals = store.deals.sort(mysort(id, 'desc'));
           firstElementChild.textContent = downArrow;
+          updateTable(store.deals);
         } else {
           store.deals = store.deals.sort(mysort(id, 'asc'));
           firstElementChild.textContent = upArrow;
+          updateTable(store.deals);
         }
       } else {
         if (id === name.id) {
@@ -160,7 +162,7 @@ function app() {
 
         sortButton.appendChild(span);
         store.deals = store.deals.sort(mysort(id, 'asc'));
-        
+        updateTable(store.deals);
       }
 
       if (store.pagination === 'all') {
